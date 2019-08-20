@@ -14,6 +14,7 @@ Once the SVG has been loaded and rendered, `onclick` events of the SVG `path` el
  
 ## Resources
  - Project is served on the development server of [UI5 Tooling](https://sap.github.io/ui5-tooling/)
+ 
     > `width` and `height` properties of the SVG was replaced with `viewbox` so the image would fit its container
     ```diff
     - <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2040" height="1028" xml:space="preserve">
