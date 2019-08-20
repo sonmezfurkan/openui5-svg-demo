@@ -8,7 +8,7 @@
 	<App id="app">
 		<Page title="Sample use case of interactive SVG image">
             <MessageStrip class="sapUiTinyMarginBeginEnd sapUiTinyMarginTop" showIcon="true" customIcon="sap-icon://globe" text="You can hover over and select parts of the map, and find the source code">
-                <Link text="here" href="#" target="_blank" />
+                <Link text="here" href="https://github.com/sonmezfurkan/openui5-svg-demo" target="_blank" />
             </MessageStrip>
 			<l:BlockLayout background="Dashboard">
                 <l:BlockLayoutRow>
