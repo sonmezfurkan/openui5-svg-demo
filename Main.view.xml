@@ -1,0 +1,45 @@
+<mvc:View
+	controllerName="demo.interactive.svg.Main"
+	displayBlock="true"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	<App id="app">
+		<Page title="Sample use case of interactive SVG image">
+            <MessageStrip class="sapUiTinyMarginBeginEnd sapUiTinyMarginTop" showIcon="true" customIcon="sap-icon://globe" text="You can hover over and select parts of the map, and find the source code">
+                <Link text="here" href="#" target="_blank" />
+            </MessageStrip>
+			<l:BlockLayout background="Dashboard">
+                <l:BlockLayoutRow>
+                    <l:BlockLayoutCell width="2">
+                        <core:HTML id="idSvgContainer" sanitizeContent="false" afterRendering="onSvgContainerRendered" />
+                        <!-- this part is just for attribution of the svg map... -->
+                        <FlexBox class="sapUiSmallMarginTop" justifyContent="SpaceBetween">
+                            <Image src="assets/amcharts-logo.svg" alt="AmCharts logo" height="2rem" />
+                            <HBox>
+                                <Text text="Map created via" />
+                                <Link class="link-attribution" subtle="true" text="AmCharts" href="http://pixelmap.amcharts.com/" target="_blank" />
+                            </HBox>
+                        </FlexBox>
+                        <!-- ... -->
+                    </l:BlockLayoutCell>
+                    <l:BlockLayoutCell>
+                        <List items="{selected>/}" headerText="Selected Parts" showNoData="false">
+                            <items>
+                                <StandardListItem title="{selected>description}" icon="sap-icon://map" />
+                            </items>
+                        </List>
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+			</l:BlockLayout>
+            <footer>
+                <Bar>
+                    <contentMiddle>
+                        <core:Icon color="#367dc4" src="sap-icon://sap-ui5" size="2.7rem" class="sapUiSmallMarginBottom" width="100%"/>
+                    </contentMiddle>
+                </Bar>
+            </footer>
+		</Page>
+	</App>
+</mvc:View>

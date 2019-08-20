@@ -1,0 +1,21 @@
+img {
+    display: block;
+}
+
+path:hover {
+    fill: #d5dadc;
+}
+
+.selected {
+    fill: #5899DA;
+    stroke: #fff;
+}
+
+.selected:hover {
+    fill: #74abe2;
+}
+
+.link-attribution {
+    display: inline !important;
+    margin-left: .2rem;
+}

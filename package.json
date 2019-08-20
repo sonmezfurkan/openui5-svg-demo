@@ -1,0 +1,15 @@
+{
+  "name": "openui5-interactive-svg",
+  "version": "1.0.0",
+  "description": "Sample use case of interactive SVG image with OpenUI5",
+  "scripts": {
+    "start": "ui5 serve --open index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@ui5/cli": "^1.7.0"
+  }
+}
