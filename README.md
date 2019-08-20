@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/40820154/63348417-7ab99880-c359-11e9-82ff-9b90a14c955b.png)
+
 # openui5-svg-demo
 Demo application for interactive usage of SVG with OpenUI5
 
