@@ -1,6 +1,6 @@
 pool:
   vmImage: 'Ubuntu-16.04'
-
+steps:
 - task: Npm@1
   inputs:
     command: 'install'
