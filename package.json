@@ -4,6 +4,7 @@
   "description": "Sample use case of interactive SVG image with OpenUI5",
   "scripts": {
     "start": "ui5 serve --open index.html",
+    "build": "ui5 build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
