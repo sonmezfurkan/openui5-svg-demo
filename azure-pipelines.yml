@@ -3,6 +3,8 @@ pool:
 variables:
   mtaBuilderImage: 'mta-archive-builder'
 steps:
+- checkout: self
+  path: 'src'
 - task: DockerInstaller@0
   displayName: Install Docker
   inputs:
@@ -14,7 +16,7 @@ steps:
 - task: CmdLine@2
   displayName: Display present working directory
   inputs:
-    script: 'ls'
+    script: 'ls ../'
 #    script: 'docker run --rm -v "${PWD}/":/project -it ppiper/mta-archive-builder:latest mtaBuild --mtar dummy.mtar --build-target NEO build'
 #- task: Npm@1
 #  inputs:
