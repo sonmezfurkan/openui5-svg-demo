@@ -1,12 +1,18 @@
 pool:
   vmImage: 'Ubuntu-16.04'
+variables:
+  mtaBuilderImage: 'mta-archive-builder'
 steps:
+- task: DockerInstaller@0
+  displayName: Install Docker
+  inputs:
+    dockerVersion: '17.09.0-ce'
 - task: Docker@2
   displayName: Build mta builder image
   inputs:
-    repository: 'https://github.com/SAP/devops-docker-mta-archive-builder.git'
+    repository: $(mtaBuilderImage)
     command: 'build'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: './Dockerfile'
 #- task: Npm@1
 #  inputs:
 #    command: 'install'
