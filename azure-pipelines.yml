@@ -7,12 +7,14 @@ steps:
   displayName: Install Docker
   inputs:
     dockerVersion: '17.09.0-ce'
-- task: Docker@2
-  displayName: Build mta builder image
+- task: CmdLine@2
+  displayName: Pull mta archive builder image
   inputs:
-    repository: $(mtaBuilderImage)
-    command: 'build'
-    Dockerfile: './Dockerfile'
+    script: 'docker pull ppiper/mta-archive-builder'
+- task: CmdLine@2
+  displayName: Display present working directory
+  inputs:
+    script: 'pwd'
 #- task: Npm@1
 #  inputs:
 #    command: 'install'
