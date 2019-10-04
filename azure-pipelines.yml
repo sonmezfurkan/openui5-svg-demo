@@ -16,8 +16,7 @@ steps:
 - task: CmdLine@2
   displayName: Display present working directory
   inputs:
-    script: 'ls ../'
-#    script: 'docker run --rm -v "${PWD}/":/project -it ppiper/mta-archive-builder:latest mtaBuild --mtar dummy.mtar --build-target NEO build'
+    script: 'docker run --rm -v "../src/":/project -it ppiper/mta-archive-builder:latest mtaBuild --mtar dummy.mtar --build-target NEO build'
 #- task: Npm@1
 #  inputs:
 #    command: 'install'
